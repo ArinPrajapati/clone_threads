@@ -4,7 +4,7 @@ const f = createUploadthing();
 
 const getUser =async () => await currentUser();
     
-}
+
 
 // FileRouter for your app, can contain multiple FileRoutes
 export const ourFileRouter = {

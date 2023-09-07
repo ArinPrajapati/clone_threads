@@ -3,14 +3,16 @@ import { currentUser } from "@clerk/nextjs";
 async function Page() {
   const user = await currentUser();
 
-  const userInfo = {};
+  const userInfo = {
+    
+  };
 
   const userData = {
     id: user?.id,
-    object: userInfo?.id,
+    objectId: userInfo?._id,
     username: userInfo?.username || user?.username,
     name: userInfo?.name || user?.firstName || "",
-    bio: userInfo?.bio || "",
+    Bio: userInfo?.bio || "",
     image: userInfo?.image || user?.imageUrl,
   };
   return (
